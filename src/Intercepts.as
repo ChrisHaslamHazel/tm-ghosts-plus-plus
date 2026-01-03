@@ -142,7 +142,7 @@ uint lastBlockedSetStartTimeNow = 1;
 int lastSetStartTime = 5000;
 bool _Ghosts_SetStartTime(CMwStack &in stack, CMwNod@ nod) {
     auto ghostStartTime = stack.CurrentInt(0);
-    // log_debug("ghosts set start time: " + ghostStartTime);
+    // log_debug("_Ghosts_SetStartTime: " + ghostStartTime);
     // if (false && g_BlockNextGhostsSetTimeReset && int(ghostStartTime) < 0) {
     //     warn("blocking ghost SetStartTime reset");
     //     g_BlockNextGhostsSetTimeReset = false;
