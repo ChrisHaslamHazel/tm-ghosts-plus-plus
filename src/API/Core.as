@@ -152,7 +152,7 @@ void RenderLoadingGhostsMsg() {
     }
     if (LoadingGhosts_Loading <= 0 && Time::Now > lastRenderLoadingInProg + 500) return;
 
-    auto screen = vec2(Draw::GetWidth(), Draw::GetHeight());
+    auto screen = vec2(Display::GetWidth(), Display::GetHeight());
     auto pos = screen * vec2(.5, .2);
 
     string _loadingStr = "Loading: " + lastRenderLoadingCounts.x + " / " + lastRenderLoadingCounts.y;

@@ -10,8 +10,8 @@ void UpdateDrawLetterboxBars() {
 const float lbPctFromEdge = 0.10;
 
 void nvg_DrawLetterbox(float t) {
-    float screenH = Draw::GetHeight();
-    float screenW = Draw::GetWidth();
+    float screenH = Display::GetHeight();
+    float screenW = Display::GetWidth();
     float lbHeight = lbPctFromEdge * screenH;
     float lbTopPos = Math::Lerp(-lbHeight, 0, t);
     float lbBottomPos = Math::Lerp(screenH, screenH - lbHeight, t);

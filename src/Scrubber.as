@@ -92,7 +92,7 @@ namespace ScrubberWindow {
     void BeforeRender() {
         UI::PushFont(GetCurrFont());
 
-        screen = vec2(Draw::GetWidth(), Draw::GetHeight());
+        screen = vec2(Display::GetWidth(), Display::GetHeight());
         screenScaled = screen / UI::GetScale();
         spacing = UI::GetStyleVarVec2(UI::StyleVar::ItemSpacing);
         fp = UI::GetStyleVarVec2(UI::StyleVar::FramePadding);
