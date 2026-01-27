@@ -48,7 +48,7 @@ namespace EngineSounds {
     }
 
     void SetEngineSoundVdBFromSettings_SpawnCoro() {
-        startnew(CoroutineFuncUserdataDouble(EngineSounds::SetEngineSoundVolumeDB), S_EngineSoundsDB);
+        startnew(EngineSounds::SetEngineSoundVolumeDB, S_EngineSoundsDB);
     }
 
     uint lastSetEngineSounds = 0;
@@ -56,7 +56,7 @@ namespace EngineSounds {
         if (lastSetEngineSounds + 100 < Time::Now) {
             double setDb = Math::Lerp(S_EngineSoundsDB, 0.0, Math::Clamp(lerp_t * lerp_t, 0.0, 1.0));
             lastSetEngineSounds = Time::Now;
-            startnew(CoroutineFuncUserdataDouble(EngineSounds::SetEngineSoundVolumeDB), setDb);
+            startnew(EngineSounds::SetEngineSoundVolumeDB, setDb);
         }
     }
 
