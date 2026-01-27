@@ -6,7 +6,7 @@ namespace Inputs {
     float padding = -1;
 
     void DrawInputs(CSceneVehicleVisState@ vis, const vec2 &in size) {
-        if (padding < 0) padding = float(Draw::GetHeight()) * 0.004;
+        if (padding < 0) padding = float(Display::GetHeight()) * 0.004;
         // float _padding =
 
         float steerLeft = vis.InputSteer < 0 ? Math::Abs(vis.InputSteer) : 0.0f;
